@@ -1,0 +1,13 @@
+{
+  "name": "torchlab-assignment-without-sock5-library",
+  "version": "1.0.0",
+  "main": "socks5_server.js",
+  "scripts": {
+    "start":"node socks5_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

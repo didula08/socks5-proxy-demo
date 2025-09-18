@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@heroku/socksv5": "^0.0.9",
+    "dotenv": "^17.2.2",
+    "socksv5": "^0.0.6"
+  },
+  "name": "torchlab-assignment",
+  "version": "1.0.0",
+  "main": "Socks5_server.js",
+  "scripts": {
+    "start": "node Socks5_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

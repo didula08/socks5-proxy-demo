@@ -1,0 +1,19 @@
+without socks5
+
+$env:PORT="18080"
+$env:AUTH_USER="intern"
+$env:AUTH_PASS="password123"
+$env:LOG_LEVEL="info" 
+$env:LOG_FORMAT="plain"
+node .\socks5_server.js
+
+curl.exe --socks5-hostname 127.0.0.1:18080 --proxy-user intern:password123 https://ipinfo.io/json
+
+---------------------------------------------------------------------------------------------------------------------
+use socks5 library
+
+npm start
+
+curl.exe -I --proxy socks5h://intern:password123@127.0.0.1:1080 https://example.com
+
+curl.exe -I --proxy socks5h://intern:wrong@127.0.0.1:1080 https://example.com
