@@ -61,6 +61,7 @@ node socks5-server.js
 
 ### 2️⃣ Run the **library version** (`socksv5`)
 
+#### Option A: Run directly with Node
 ```bash
 # Linux / macOS
 cd "Torchlab Assignment"
@@ -83,6 +84,35 @@ $env:AUTH_PASS="password123"
 node alt-socksv5.js
 ```
 
+#### Option B: Run with npm start (recommended)
+Edit `Torchlab Assignment/package.json` and ensure it contains:
+
+```json
+"scripts": {
+  "start": "node alt-socksv5.js"
+}
+```
+
+Then simply run:
+
+```bash
+# Linux / macOS
+export HOST=0.0.0.0
+export PORT=1080
+export AUTH_USER=intern
+export AUTH_PASS=password123
+npm start
+```
+
+```powershell
+# Windows PowerShell
+$env:HOST="0.0.0.0"
+$env:PORT="1080"
+$env:AUTH_USER="intern"
+$env:AUTH_PASS="password123"
+npm start
+```
+
 ---
 
 ## 🧪 Testing the Proxy
@@ -91,7 +121,7 @@ Use `curl` with the **SOCKS5 proxy option**.
 The `socks5h` scheme ensures that **DNS lookups are done through the proxy**, not locally.
 
 ```bash
-curl -x socks5h://intern:password123@127.0.0.1:1080 https://ipinfo.io/json
+curl.exe -x socks5h://intern:password123@127.0.0.1:1080 https://ipinfo.io/json
 ```
 
 ✅ If successful, you’ll see a JSON response with your IP and geolocation (as seen by the proxy).  
